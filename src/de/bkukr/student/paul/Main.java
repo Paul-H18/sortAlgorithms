@@ -4,6 +4,7 @@ import java.util.Random;
 public class Main {
 
     public static int[] list = new int[16];
+    int test;
 
     public static void main(String[] args) {
         randArray(list);
@@ -80,4 +81,3 @@ public class Main {
 
 
 }
-
