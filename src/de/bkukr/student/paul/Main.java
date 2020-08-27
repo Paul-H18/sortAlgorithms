@@ -1,33 +1,50 @@
 package de.bkukr.student.paul;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
-    public static int[] list = new int[16];
 
     public static void main(String[] args) {
-        randArray(list, 1000);
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Wie viele Werte wollen Sie sortieren: ");
+        int x = scan.nextInt();
+        scan.reset();
+
+        System.out.print("Wie hoch soll der maximale Wert sein: ");
+        int y = scan.nextInt();
+
+        int[] list = new int[x];
+
+        randArray(list, y);
         printArray(list);
-        insertionSortArray(list);
+
+        bubbleSortArray(list);
+
+        //insertionSortArray(list);
+        //selectionSortArray(list);
+
         printArray(list);
     }
 
     public static void selectionSortArray(int[] arr) {
-        int a, b, c;
-
-        for (int i = 0; i < arr.length - 1; i++) {
-            a = arr[i];
-            if(a > arr[i+1]) {
-                a = arr[i + 1];
+        int b, c;
+        for (int i = 0; i <= arr.length - 2; i++) {
+            b = i+1;
+            c = arr[b];
+            while(b > 0 && c < arr[b - 1]){
+                arr[b] = arr[b - 1];
+                b--;
             }
+            arr[b] = c;
         }
-
-
 
     }
 
     public static void insertionSortArray(int[] arr) {
-        int a = 0, b = 0;
+        int a, b ;
 
         for (int i = 0; i <= arr.length - 1; i++) {
             a = arr[i];
