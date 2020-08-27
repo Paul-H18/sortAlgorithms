@@ -15,6 +15,7 @@ public class Main {
 
         System.out.print("Wie hoch soll der maximale Wert sein: ");
         int y = scan.nextInt();
+        scan.close();
 
         int[] list = new int[x];
 
