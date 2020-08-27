@@ -6,15 +6,13 @@ public class Main {
     public static int[] list = new int[16];
 
     public static void main(String[] args) {
-        randArray(list);
+        randArray(list, 1000);
         printArray(list);
-        bubbleSortArray(list);
+        insertionSortArray(list);
         printArray(list);
-
-
     }
 
-    public static void selectionSortArray(int[] arr){
+    public static void selectionSortArray(int[] arr) {
         int a, b, c;
 
         for (int i = 0; i < arr.length - 1; i++) {
@@ -28,18 +26,17 @@ public class Main {
 
     }
 
-    public static void insertionSortArray(int[] arr){
-        int a, b;
+    public static void insertionSortArray(int[] arr) {
+        int a = 0, b = 0;
 
-        for (int i = 0; i < arr.length - 1; i++) {
+        for (int i = 0; i <= arr.length - 1; i++) {
             a = arr[i];
             b = i;
-            while(b > 1 && arr[b-1] > a){
+            while(b >= 1 && arr[b - 1] > a){
                 arr[b] = arr[b-1];
                 b--;
             }
             arr[b] = a;
-
         }
     }
 
@@ -67,12 +64,11 @@ public class Main {
     }
 
 
-    public static void randArray(int[] arr) {
+    public static void randArray(int[] arr, int max) {
         Random rand = new Random();
-        int j = 1000;
 
         for(int i = 0; i<= arr.length - 1; i++) {
-            arr[i] = rand.nextInt(j);
+            arr[i] = rand.nextInt(max);
         }
 
 
