@@ -17,15 +17,15 @@ public class Main {
         int y = scan.nextInt();
         scan.close();
 
+
+        QuickSort qs = new QuickSort();
+
         int[] list = new int[x];
 
         randArray(list, y);
         printArray(list);
 
-        //bubbleSortArray(list);
-
-        //insertionSortArray(list);
-        //selectionSortArray(list);
+        qs.quickSortArray(list, 0, list.length-1);
 
         printArray(list);
     }
@@ -33,7 +33,7 @@ public class Main {
 
 
 
-    
+
 
     public static void printArray(int[] arr) {
         for(int i = 0; i<= arr.length - 1; i++) {
