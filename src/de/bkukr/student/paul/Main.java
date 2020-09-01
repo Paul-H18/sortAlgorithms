@@ -22,7 +22,7 @@ public class Main {
         randArray(list, y);
         printArray(list);
 
-        bubbleSortArray(list);
+        //bubbleSortArray(list);
 
         //insertionSortArray(list);
         //selectionSortArray(list);
@@ -30,49 +30,10 @@ public class Main {
         printArray(list);
     }
 
-    public static void selectionSortArray(int[] arr) {
-        int b, c;
-        for (int i = 0; i <= arr.length - 2; i++) {
-            b = i+1;
-            c = arr[b];
-            while(b > 0 && c < arr[b - 1]){
-                arr[b] = arr[b - 1];
-                b--;
-            }
-            arr[b] = c;
-        }
 
-    }
 
-    public static void insertionSortArray(int[] arr) {
-        int a, b ;
 
-        for (int i = 0; i <= arr.length - 1; i++) {
-            a = arr[i];
-            b = i;
-            while(b >= 1 && arr[b - 1] > a){
-                arr[b] = arr[b-1];
-                b--;
-            }
-            arr[b] = a;
-        }
-    }
-
-    public static void bubbleSortArray(int[] arr) {
-        int a, b = arr.length;
-
-        while(b > 0) {
-            for(int i = 0; i<=arr.length - 2; i++) {
-                if(arr[i] > arr[i+1]) {
-                    a = arr[i+1];
-                    arr[i+1] = arr[i];
-                    arr[i] = a;
-                }
-            }
-            b--;
-        }
-
-    }
+    
 
     public static void printArray(int[] arr) {
         for(int i = 0; i<= arr.length - 1; i++) {
