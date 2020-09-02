@@ -10,6 +10,12 @@ public class Main {
         Frame frame = new Frame();
         frame.setUp();
 
+
+
+
+
+
+        //For Console usage:
         /*Scanner scan = new Scanner(System.in);
 
         System.out.print("Wie viele Werte wollen Sie sortieren: ");
