@@ -7,7 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
+        Frame frame = new Frame();
+        frame.setUp();
+
+        /*Scanner scan = new Scanner(System.in);
 
         System.out.print("Wie viele Werte wollen Sie sortieren: ");
         int x = scan.nextInt();
@@ -27,7 +30,7 @@ public class Main {
 
         qs.quickSortArray(list, 0, list.length-1);
 
-        printArray(list);
+        printArray(list);*/
 
     }
 
