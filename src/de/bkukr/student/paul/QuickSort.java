@@ -2,46 +2,43 @@ package de.bkukr.student.paul;
 
 public class QuickSort {
 
-    public void quickSortArray(int arr[], int left, int right) {
-        int i = part(arr, left, right);
+        public int share(int list[], final int first, final int last) {
+            int pivot = list[(first + last) / 2];
+            int posLeft = first;
+            int posRight = last;
 
-        if (i < right) {
-            quickSortArray(arr, i, right);
-        } else if(left < i - 1){
-            quickSortArray(arr, left, i - 1);
+            while(posLeft <= posRight) {
+                while(list[posLeft] < pivot) {
+                    posLeft++;
+                }
+
+                while(list[posRight] > pivot) {
+                    posRight--;
+                }
+
+                if(posLeft <= posRight) {
+                    int tmp = list[posLeft];
+                    list[posLeft] = list[posRight];
+                    list[posRight] = tmp;
+                    posLeft++;
+                    posRight--;
+                }
+            }
+
+            return posLeft;
         }
 
-    }
+        public void quicksort(int list[], final int first, final int last) {
+            int index = share(list, first, last);
 
-
-
-
-    private int part(int arr[], int left, int right) {
-        int pivot = arr[(left  + right) / 2];
-
-        int l = left, r = right;
-
-        while(l <= r) {
-            while(arr[r] > pivot) {
-                r--;
+            if(first < index - 1) {
+                quicksort(list, first, index-1);
             }
-            while(arr[l] < pivot) {
-                l++;
-            }
-
-            if(l <= r) {
-                int i = arr[l];
-                arr[l] = arr[r];
-                arr[r] = i;
-
-                r--;
-                l++;
+            if(index < last) {
+                quicksort(list, index, last);
             }
 
         }
-
-        return l;
-    }
 
 
 }

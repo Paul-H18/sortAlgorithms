@@ -7,8 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Frame frame = new Frame();
-        frame.setUp();
+        /*Frame frame = new Frame();
+        frame.setUp();*/
 
 
 
@@ -16,7 +16,7 @@ public class Main {
 
 
         //For Console usage:
-        /*Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.print("Wie viele Werte wollen Sie sortieren: ");
         int x = scan.nextInt();
@@ -34,9 +34,9 @@ public class Main {
         randArray(list, y);
         printArray(list);
 
-        qs.quickSortArray(list, 0, list.length-1);
+        qs.quicksort(list, 0, list.length-1);
 
-        printArray(list);*/
+        printArray(list);
 
     }
 
