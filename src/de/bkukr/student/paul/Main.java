@@ -1,6 +1,7 @@
 package de.bkukr.student.paul;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Main {
 
@@ -9,10 +10,6 @@ public class Main {
 
         /*Frame frame = new Frame();
         frame.setUp();*/
-
-
-
-
 
 
         //For Console usage:
@@ -27,16 +24,18 @@ public class Main {
         scan.close();
 
 
-        QuickSort qs = new QuickSort();
+        MergeSort ms = new MergeSort();
 
         int[] list = new int[x];
+        int[] list2 = new int[x];
 
         randArray(list, y);
         printArray(list);
 
-        qs.quicksort(list, 0, list.length-1);
+        System.arraycopy(ms.sort(list), 0, list2, 0, x);
 
-        printArray(list);
+
+        printArray(list2);
 
     }
 
