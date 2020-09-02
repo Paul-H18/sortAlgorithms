@@ -28,6 +28,7 @@ public class Main {
         qs.quickSortArray(list, 0, list.length-1);
 
         printArray(list);
+
     }
 
 
