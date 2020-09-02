@@ -25,17 +25,29 @@ public class Main {
 
 
         MergeSort ms = new MergeSort();
+        QuickSort qs = new QuickSort();
+
+
 
         int[] list = new int[x];
         int[] list2 = new int[x];
 
         randArray(list, y);
-        printArray(list);
+        System.arraycopy(list, 0, list2, 0, x);
 
-        System.arraycopy(ms.sort(list), 0, list2, 0, x);
+        long startTime = System.currentTimeMillis();
+        ms.sort(list);
+        long endTime = System.currentTimeMillis();
+        long mergeTime = endTime - startTime;
+
+        long startTimeQ = System.currentTimeMillis();
+        qs.quicksort(list2, 0, list.length - 1);
+        long endTimeQ = System.currentTimeMillis();
+        long quickTime = endTimeQ - startTimeQ;
 
 
-        printArray(list2);
+        System.out.println("Der Mergesort benötigte: " + mergeTime+ " ms!");
+        System.out.println("Der Quicksort benötigte: " + quickTime + " ms!");
 
     }
 
