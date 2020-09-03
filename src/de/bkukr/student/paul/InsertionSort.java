@@ -2,7 +2,7 @@ package de.bkukr.student.paul;
 
 public class InsertionSort {
 
-    public void insertionSortArray(int[] arr) {
+    public void sort(int[] arr) {
         int a, b ;
 
         for (int i = 0; i <= arr.length - 1; i++) {

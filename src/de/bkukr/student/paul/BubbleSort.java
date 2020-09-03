@@ -2,7 +2,7 @@ package de.bkukr.student.paul;
 
 public class BubbleSort {
 
-    public void bubbleSortArray(int[] arr) {
+    public void sort(int[] arr) {
         int a, b = arr.length;
 
         while(b > 0) {

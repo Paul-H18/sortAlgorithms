@@ -2,7 +2,7 @@ package de.bkukr.student.paul;
 
 public class SelectionSort {
 
-    public void selectionSortArray(int[] arr) {
+    public void sort(int[] arr) {
         int b, c;
         for (int i = 0; i <= arr.length - 2; i++) {
             b = i+1;

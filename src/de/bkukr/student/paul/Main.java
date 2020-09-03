@@ -26,6 +26,7 @@ public class Main {
 
         MergeSort ms = new MergeSort();
         QuickSort qs = new QuickSort();
+        BubbleSort bs = new BubbleSort();
 
 
 
