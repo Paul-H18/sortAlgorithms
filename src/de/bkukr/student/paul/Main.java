@@ -27,14 +27,22 @@ public class Main {
         MergeSort ms = new MergeSort();
         QuickSort qs = new QuickSort();
         BubbleSort bs = new BubbleSort();
+        SelectionSort ss = new SelectionSort();
+        InsertionSort is = new InsertionSort();
 
 
 
         int[] list = new int[x];
         int[] list2 = new int[x];
+        int[] list3 = new int[x];
+        int[] list4 = new int[x];
+        int[] list5 = new int[x];
 
         randArray(list, y);
         System.arraycopy(list, 0, list2, 0, x);
+        System.arraycopy(list, 0, list3, 0, x);
+        System.arraycopy(list, 0, list4, 0, x);
+        System.arraycopy(list, 0, list5, 0, x);
 
         long startTime = System.currentTimeMillis();
         ms.sort(list);
@@ -46,9 +54,27 @@ public class Main {
         long endTimeQ = System.currentTimeMillis();
         long quickTime = endTimeQ - startTimeQ;
 
+        long startTimeB = System.currentTimeMillis();
+        bs.sort(list3);
+        long endTimeB = System.currentTimeMillis();
+        long bubbleTime = endTimeB - startTimeB;
+
+        long startTimeS = System.currentTimeMillis();
+        ss.sort(list4);
+        long endTimeS = System.currentTimeMillis();
+        long selectionTime = endTimeS - startTimeS;
+
+        long startTimeI = System.currentTimeMillis();
+        is.sort(list5);
+        long endTimeI = System.currentTimeMillis();
+        long insertionTime = endTimeI - startTimeI;
+
 
         System.out.println("Der Mergesort benötigte: " + mergeTime+ " ms!");
         System.out.println("Der Quicksort benötigte: " + quickTime + " ms!");
+        System.out.println("Der BubbleSort benötigte: " + bubbleTime+ " ms!");
+        System.out.println("Der InsertionSort benötigte: " + insertionTime + " ms!");
+        System.out.println("Der Selection benötigte: " + selectionTime + " ms!");
 
     }
 
