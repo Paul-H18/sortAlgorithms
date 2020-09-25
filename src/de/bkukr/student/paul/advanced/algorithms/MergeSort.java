@@ -1,6 +1,21 @@
-package de.bkukr.student.paul;
+package de.bkukr.student.paul.advanced.algorithms;
 
 public class MergeSort {
+
+    private int amountSwitches, amountComparisions;
+    long startTime, endTime;
+
+    public int getAmountSwitches() {
+        return amountSwitches;
+    }
+
+    public int getAmountComparisions() {
+        return amountComparisions;
+    }
+
+    public long getNeededTime() {
+        return endTime - startTime;
+    }
 
     public int[] sort(int[] arr) {
 

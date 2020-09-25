@@ -1,6 +1,21 @@
-package de.bkukr.student.paul;
+package de.bkukr.student.paul.advanced.algorithms;
 
 public class QuickSort {
+
+        private int amountSwitches, amountComparisions;
+        long startTime, endTime;
+
+        public int getAmountSwitches() {
+            return amountSwitches;
+        }
+
+        public int getAmountComparisions() {
+            return amountComparisions;
+        }
+
+        public long getNeededTime() {
+            return endTime - startTime;
+        }
 
         public int divide(int list[], int first, int last) {
             int pivot = list[(first + last) / 2];
@@ -28,14 +43,14 @@ public class QuickSort {
             return posLeft;
         }
 
-        public void quicksort(int list[], int first, int last) {
+        public void sort(int list[], int first, int last) {
             int index = divide(list, first, last);
 
             if(first < index - 1) {
-                quicksort(list, first, index-1);
+                sort(list, first, index-1);
             }
             if(index < last) {
-                quicksort(list, index, last);
+                sort(list, index, last);
             }
 
         }
