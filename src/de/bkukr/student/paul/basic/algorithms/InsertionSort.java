@@ -2,7 +2,7 @@ package de.bkukr.student.paul.basic.algorithms;
 
 public class InsertionSort {
 
-    private int amountComparisions, amountSwitches;
+    private  long amountComparisions, amountSwitches;
     long startTime, endTime;
 
     public void reset() {
@@ -10,16 +10,22 @@ public class InsertionSort {
         amountSwitches = 0;
     }
 
-    public int getAmountComparisions() {
+    public long getAmountComparisions() {
         return amountComparisions;
     }
 
-    public int getAmountSwitches() {
+    public long getAmountSwitches() {
         return amountSwitches;
     }
 
     public long getNeededTime() {
         return endTime - startTime;
+    }
+
+    public void printStats() {
+        System.out.println("Comparisions: "+ this.getAmountComparisions());
+        System.out.println("Switches: " + this.getAmountSwitches());
+        System.out.println("Zeit: "+ this.getNeededTime() + "ms");
     }
 
 
@@ -33,9 +39,10 @@ public class InsertionSort {
             amountComparisions++;
             while(b >= 1 && arr[b - 1] > a){
                 amountComparisions++;
-                amountSwitches++;
                 arr[b] = arr[b-1];
                 b--;
+
+                amountSwitches++;
             }
             arr[b] = a;
         }

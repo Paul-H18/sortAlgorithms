@@ -17,6 +17,12 @@ public class MergeSort {
         return endTime - startTime;
     }
 
+    public void printStats() {
+        System.out.println("Comparisions: "+ this.getAmountComparisions());
+        System.out.println("Switches: " + this.getAmountSwitches());
+        System.out.println("Zeit: "+ this.getNeededTime() + "ms");
+    }
+
     public int[] sort(int[] arr) {
 
         if(arr.length > 1) {

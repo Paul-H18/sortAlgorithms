@@ -22,6 +22,12 @@ public class SelectionSort {
         return endTime - startTime;
     }
 
+    public void printStats() {
+        System.out.println("Comparisions: "+ this.getAmountComparisions());
+        System.out.println("Switches: " + this.getAmountSwitches());
+        System.out.println("Zeit: "+ this.getNeededTime() + "ms");
+    }
+
     public void sort(int[] arr) {
         startTime = System.currentTimeMillis();
 
@@ -32,9 +38,10 @@ public class SelectionSort {
             amountComparisions++;
             while(b > 0 && c < arr[b - 1]){
                 amountComparisions++;
-                amountSwitches++;
                 arr[b] = arr[b - 1];
                 b--;
+
+                amountSwitches++;
             }
             arr[b] = c;
         }

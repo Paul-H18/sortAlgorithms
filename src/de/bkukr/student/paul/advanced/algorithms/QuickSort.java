@@ -17,6 +17,12 @@ public class QuickSort {
             return endTime - startTime;
         }
 
+    public void printStats() {
+        System.out.println("Comparisions: "+ this.getAmountComparisions());
+        System.out.println("Switches: " + this.getAmountSwitches());
+        System.out.println("Zeit: "+ this.getNeededTime() + "ms");
+    }
+
         public int divide(int list[], int first, int last) {
             int pivot = list[(first + last) / 2];
             int posLeft = first;
