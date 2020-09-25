@@ -26,6 +26,7 @@ public class BubbleSort {
     }
 
     public void printStats() {
+        System.out.println("\nBubbleSort:");
         System.out.println("Comparisions: "+ this.getAmountComparisions());
         System.out.println("Switches: " + this.getAmountSwitches());
         System.out.println("Zeit: "+ this.getNeededTime() + "ms");

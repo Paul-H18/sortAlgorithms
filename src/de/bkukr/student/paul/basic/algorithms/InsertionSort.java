@@ -23,6 +23,7 @@ public class InsertionSort {
     }
 
     public void printStats() {
+        System.out.println("\nInsertionSort:");
         System.out.println("Comparisions: "+ this.getAmountComparisions());
         System.out.println("Switches: " + this.getAmountSwitches());
         System.out.println("Zeit: "+ this.getNeededTime() + "ms");
@@ -48,6 +49,4 @@ public class InsertionSort {
         }
         endTime = System.currentTimeMillis();
     }
-
-
 }

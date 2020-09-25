@@ -40,6 +40,12 @@ public class Main {
         is.sort(list);
         is.printStats();
 
+
+        bs.sort(list2);
+        bs.printStats();
+
+        ss.sort(list3);
+        ss.printStats();
     }
 
 
