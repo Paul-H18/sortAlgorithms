@@ -32,7 +32,7 @@ public class SelectionSort {
     public void sort(int[] arr) {
         startTime = System.currentTimeMillis();
 
-        
+
         int left = 0, n = arr.length, min, x;
 
         for(int j = 0; j < arr.length; j++) {

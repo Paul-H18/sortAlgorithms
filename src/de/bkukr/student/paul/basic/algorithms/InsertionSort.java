@@ -39,7 +39,6 @@ public class InsertionSort {
             b = i;
             amountComparisions++;
             while(b >= 1 && arr[b - 1] > a){
-                amountComparisions++;
                 arr[b] = arr[b-1];
                 b--;
 
