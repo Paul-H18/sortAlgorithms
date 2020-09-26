@@ -19,6 +19,4 @@ public class ArrayOperations {
             arr[i] = rand.nextInt(max);
         }
     }
-
-
 }
