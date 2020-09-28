@@ -40,12 +40,12 @@ public class BubbleSort {
 
         while(b > 0) {
             for(int i = 0; i<=arr.length - 2; i++) {
-                amountComparisions++;
+                this.amountComparisions++;
                 if(arr[i] > arr[i+1]) {
                     a = arr[i+1];
                     arr[i+1] = arr[i];
                     arr[i] = a;
-                    amountSwitches++;
+                    this.amountSwitches++;
                 }
             }
             b--;

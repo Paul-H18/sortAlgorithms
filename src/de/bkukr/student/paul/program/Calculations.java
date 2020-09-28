@@ -7,7 +7,16 @@ public class Calculations {
         for (int i = 0; i < arr.length; i++) {
             n = n + arr[i];
         }
-        return n/arr.length;
+        n = n/arr.length;
+        return n;
+    }
+
+    public static long pow(int base, int exponent) {
+        long result = base;
+        for (int i = 1; i < exponent; i++) {
+            result = result * base;
+        }
+        return result;
     }
 
 

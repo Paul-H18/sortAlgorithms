@@ -43,6 +43,9 @@ public class Main {
             sh.refreshStats(i);
         }
 
+        sh.printStates();
+
+
     }
 
 

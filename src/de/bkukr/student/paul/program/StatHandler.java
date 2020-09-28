@@ -52,6 +52,15 @@ public class StatHandler {
         return Calculations.mean(bleSortTime);
     }
 
+    public void printStates() {
+        System.out.println("Bubblesort:\nComparisions: " + this.getMeanBubbleSortComparisons() + "\nSwicthes: " + this.getMeanBubbleSortSwitches() + "\nTime: " + this.getMeanBubbleSortTime());
+        System.out.print("\n");
+        System.out.println("Selectionsort:\nComparisions: " + this.getMeanSelectionSortSComparisons() + "\nSwicthes: " + this.getMeanSelectionSortSwitches() + "\nTime: " + this.getMeanSelectionSortTime());
+        System.out.print("\n");
+        System.out.println("Bubblesort:\nComparisions: " + this.getMeanInsertionSortSComparisons() + "\nSwicthes: " + this.getMeanInsertionSortSwitches() + "\nTime: " + getMeanInsertionSortTime());
+
+    }
+
     public long getMeanSelectionSortSwitches() {
         return Calculations.mean(selSortSwitches);
     }
