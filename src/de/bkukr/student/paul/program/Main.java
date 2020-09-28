@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Wie viele Werte wollen Sie sortieren: ");
@@ -18,34 +19,30 @@ public class Main {
         scan.close();
 
 
-        MergeSort ms = new MergeSort();
-        QuickSort qs = new QuickSort();
         BubbleSort bs = new BubbleSort();
         SelectionSort ss = new SelectionSort();
         InsertionSort is = new InsertionSort();
+
+        StatHandler sh = new StatHandler(ss, is, bs);
+
 
 
         int[] list = new int[x];
         int[] list2 = new int[x];
         int[] list3 = new int[x];
-        int[] list4 = new int[x];
-        int[] list5 = new int[x];
-
-        ArrayOperations.randArray(list, y);
-        System.arraycopy(list, 0, list2, 0, x);
-        System.arraycopy(list, 0, list3, 0, x);
-        System.arraycopy(list, 0, list4, 0, x);
-        System.arraycopy(list, 0, list5, 0, x);
-
-        is.sort(list);
-        is.printStats();
 
 
-        bs.sort(list2);
-        bs.printStats();
 
-        ss.sort(list3);
-        ss.printStats();
+        for (int i = 0; i < 10; i++) {
+            ArrayOperations.randArray(list, y);
+            ArrayOperations.copyArrays(list, list2, list3);
+
+            is.sort(list);
+            bs.sort(list2);
+            ss.sort(list3);
+            sh.refreshStats(i);
+        }
+
     }
 
 

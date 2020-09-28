@@ -19,4 +19,11 @@ public class ArrayOperations {
             arr[i] = rand.nextInt(max);
         }
     }
+
+    public static void copyArrays(int[]startArr, int[] arr0, int[] arr1) {
+        int x = startArr.length;
+
+        System.arraycopy(startArr, 0, arr0, 0, x);
+        System.arraycopy(startArr, 0, arr1, 0, x);
+    }
 }

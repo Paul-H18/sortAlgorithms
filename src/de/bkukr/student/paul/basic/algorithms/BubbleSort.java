@@ -4,7 +4,7 @@ import static java.lang.System.currentTimeMillis;
 
 public class BubbleSort {
 
-    private int amountComparisions, amountSwitches;
+    private long amountComparisions, amountSwitches;
     long endTime, startTime;
 
 
@@ -13,11 +13,11 @@ public class BubbleSort {
         amountSwitches = 0;
     }
 
-    public int getAmountComparisions() {
+    public long getAmountComparisions() {
         return amountComparisions;
     }
 
-    public int getAmountSwitches() {
+    public long getAmountSwitches() {
         return amountSwitches;
     }
 

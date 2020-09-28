@@ -2,19 +2,19 @@ package de.bkukr.student.paul.basic.algorithms;
 
 public class SelectionSort {
 
-    private int amountComparisons, amountSwitches;
-    long startTime, endTime;
+    private long amountComparisons, amountSwitches;
+    private long startTime, endTime;
 
     public void reset() {
         amountComparisons = 0;
         amountSwitches = 0;
     }
 
-    public int getAmountComparisons() {
+    public long getAmountComparisons() {
         return amountComparisons;
     }
 
-    public int getAmountSwitches() {
+    public long getAmountSwitches() {
         return amountSwitches;
     }
 
