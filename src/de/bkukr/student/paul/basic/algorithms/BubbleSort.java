@@ -35,22 +35,36 @@ public class BubbleSort {
 
 
     public void sort(int[] arr) {
-        startTime = System.currentTimeMillis();
         int a, b = arr.length;
 
         while(b > 0) {
-            for(int i = 0; i<=arr.length - 2; i++) {
-                this.amountComparisions++;
+            for(int i = 0; i < arr.length - 1; i++) {
                 if(arr[i] > arr[i+1]) {
                     a = arr[i+1];
                     arr[i+1] = arr[i];
                     arr[i] = a;
-                    this.amountSwitches++;
                 }
             }
             b--;
         }
-        endTime = System.currentTimeMillis();
+    }
+
+
+    //Unten Bubblesort mit For-Schleife
+
+
+    public void sortFor(int[] arr) {
+        int a, b = arr.length;
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1; j++) {
+                if(arr[j] > arr[j + 1]) {
+                    a = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = a;
+                }
+            }
+        }
     }
 
 

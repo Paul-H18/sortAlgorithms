@@ -2,6 +2,7 @@ package de.bkukr.student.paul.program;
 import de.bkukr.student.paul.advanced.algorithms.*;
 import de.bkukr.student.paul.basic.algorithms.*;
 
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class Main {
@@ -23,27 +24,16 @@ public class Main {
         SelectionSort ss = new SelectionSort();
         InsertionSort is = new InsertionSort();
 
-        StatHandler sh = new StatHandler(ss, is, bs);
-
-
-
         int[] list = new int[x];
         int[] list2 = new int[x];
         int[] list3 = new int[x];
 
+        ArrayOperations.randArray(list, 100);
+        ArrayOperations.printArray(list);
+        BubbleSort2.sortieren(list);
+        ArrayOperations.printArray(list);
 
 
-        for (int i = 0; i < 10; i++) {
-            ArrayOperations.randArray(list, y);
-            ArrayOperations.copyArrays(list, list2, list3);
-
-            is.sort(list);
-            bs.sort(list2);
-            ss.sort(list3);
-            sh.refreshStats(i);
-        }
-
-        sh.printStates();
 
 
     }

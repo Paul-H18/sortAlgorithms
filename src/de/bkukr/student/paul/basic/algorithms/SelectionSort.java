@@ -30,9 +30,6 @@ public class SelectionSort {
     }
 
     public void sort(int[] arr) {
-        startTime = System.currentTimeMillis();
-
-
         int left = 0, n = arr.length, min, x;
 
         for(int j = 0; j < arr.length; j++) {
@@ -40,17 +37,13 @@ public class SelectionSort {
             for (int i = j+  1; i < arr.length; i++) {
                 if(arr[i] < arr[min]) {
                     min = i;
-                    amountComparisons++;
                 }
             }
             x = arr[min];
             arr[min] = arr[left];
             arr[left] = x;
-            amountSwitches++;
             left++;
         }
-
-        endTime = System.currentTimeMillis();
 
     }
 
