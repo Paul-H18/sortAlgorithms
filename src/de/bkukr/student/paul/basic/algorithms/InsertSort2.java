@@ -14,8 +14,5 @@ public class InsertSort2 {
             }
             arr[b] = a;
         }
-
     }
-
-
 }
