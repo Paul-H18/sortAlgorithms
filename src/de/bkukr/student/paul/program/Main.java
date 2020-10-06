@@ -30,7 +30,7 @@ public class Main {
 
         ArrayOperations.randArray(list, 100);
         ArrayOperations.printArray(list);
-        BubbleSort2.sortieren(list);
+        InsertSort2.sort(list);
         ArrayOperations.printArray(list);
 
 
