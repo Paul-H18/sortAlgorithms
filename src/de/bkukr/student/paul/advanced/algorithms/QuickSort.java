@@ -58,8 +58,5 @@ public class QuickSort {
             if(index < last) {
                 sort(list, index, last);
             }
-
         }
-
-
 }

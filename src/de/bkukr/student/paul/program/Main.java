@@ -23,6 +23,8 @@ public class Main {
         BubbleSort bs = new BubbleSort();
         SelectionSort ss = new SelectionSort();
         InsertionSort is = new InsertionSort();
+        MergeSort ms = new MergeSort();
+
 
         int[] list = new int[x];
         int[] list2 = new int[x];
@@ -30,7 +32,12 @@ public class Main {
 
         ArrayOperations.randArray(list, 100);
         ArrayOperations.printArray(list);
-        InsertSort2.sort(list);
+
+        list = ms.sort(list);
+
+        ArrayOperations.printArray(list);
+
+
         ArrayOperations.printArray(list);
 
 

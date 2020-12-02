@@ -1,27 +1,24 @@
+/**
+ * Merge Sort
+ * Zum ausführen neues Objekt erstellen
+ * und dann die Methode "sort" ausführen.
+ *
+ * Bsp.:
+ *
+ * MergeSort ms = new MergeSort();
+ * list = ms.sort(list);
+ *
+ * @author Paul H. TG93
+ * @version 1.0
+ */
+
+
+
+
 package de.bkukr.student.paul.advanced.algorithms;
 
 public class MergeSort {
 
-    private int amountSwitches, amountComparisions;
-    long startTime, endTime;
-
-    public int getAmountSwitches() {
-        return amountSwitches;
-    }
-
-    public int getAmountComparisions() {
-        return amountComparisions;
-    }
-
-    public long getNeededTime() {
-        return endTime - startTime;
-    }
-
-    public void printStats() {
-        System.out.println("Comparisions: "+ this.getAmountComparisions());
-        System.out.println("Switches: " + this.getAmountSwitches());
-        System.out.println("Zeit: "+ this.getNeededTime() + "ms");
-    }
 
     public int[] sort(int[] arr) {
 
